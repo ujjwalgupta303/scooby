@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "670023043351",
+    "firebase_url": "https://logem-1f4a0.firebaseio.com",
+    "project_id": "logem-1f4a0",
+    "storage_bucket": "logem-1f4a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670023043351:android:8abca25934d2ef01",
+        "android_client_info": {
+          "package_name": "com.example.lenovo.logem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "670023043351-uv4qvj4sdi2282u26nah4kb368hj1qln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHCRil0EdjlPdkHbAm41lOXuKeqsunrl4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
