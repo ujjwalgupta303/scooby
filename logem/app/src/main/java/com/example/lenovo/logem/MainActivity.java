@@ -2,9 +2,12 @@ package com.example.lenovo.logem;
 
 import android.app.ProgressDialog; 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
@@ -34,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Utils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_main);
 
         Name = (EditText) findViewById(R.id.etName);
@@ -63,6 +67,35 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main,menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.item1:
+                Toast.makeText(this, "Theme 1 is selected", Toast.LENGTH_SHORT).show();
+                Utils.changeToTheme(this,Utils.THEME_DEFAULT);
+                return true;
+
+            case R.id.item2:
+                Toast.makeText(this, "Theme 2 is selected", Toast.LENGTH_SHORT).show();
+                Utils.changeToTheme(this,Utils.THEME_BLUE);
+                return true;
+
+            case R.id.item3:
+                Toast.makeText(this, "Theme 3 is selected", Toast.LENGTH_SHORT).show();
+                Utils.changeToTheme(this,Utils.THEME_WHITE);
+                return true;
+
+                default:
+                    return super.onOptionsItemSelected(item);
+        }
+
+    }
+
     private void validate(final String userName, String userPassword){
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
         firebaseAuth.signInWithEmailAndPassword(userName, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {

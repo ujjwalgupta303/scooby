@@ -8,4 +8,20 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Theme1" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#897678</item>
+        <item name="colorPrimaryDark">#234238</item>
+        <item name="colorAccent">#675450</item>
+    </style>
+
+    <style name="Theme2" >
+        <item name="android:textColor">#00FF00</item>
+    </style>
+
+    <style name="Theme3" >
+        <item name="android:textColor">#0000F0</item>
+    </style>
+
+
 </resources>
